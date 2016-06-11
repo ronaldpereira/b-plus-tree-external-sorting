@@ -1,0 +1,15 @@
+Modificar a entrada do add para uma string de tamanho 30 após a leitura do unsigned long long int (scanf("%llu\t%s\t%s", chave, str_1[30], str_2[30])) e unir isso tudo em um arquivo que conterá somente as chaves e os registros.
+
+Fazer dois arquivos de texto:
+Um para armazenar a árvore e suas chaves somente (para a operação de dump).
+Outro para armazenar as chaves e os registros (para a operação de search).
+
+Estruturar todo o arquivo de texto da árvore (que guarda somente as chaves) para que não perca o vínculo de árvore b+ -> organização dos nodos e das chaves não pode se atrapalhar.
+Ideia: Fazer algum tipo de identificador que identifique se estou na sub-árvore à esquerda ou na sub-árvore à direita -> pensar em um modo fácil e à prova de erros de fazer isso.
+
+
+Fórmula :
+n = Nível da altura da árvore (começa no arquivo do 1)
+i = Índice de contagem do nodo interno
+n,i[min] = (indice*ordem)-(ordem-1)
+n,i[max] = (indice*ordem)
